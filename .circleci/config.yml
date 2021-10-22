@@ -23,6 +23,8 @@ jobs:
           configuration_path: .circleci/pipeline.yml
          
 workflows:
+  version 2.1
   setup:
     jobs:
+      - setup
         
