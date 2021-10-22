@@ -1,2 +1,28 @@
 version: 2.1
 setup: true
+orbs:
+  go: circleci/go@1.6.0
+  continuation: circleci/continuation@0.1.2
+  
+jobs:
+  setup: 
+    docker: 
+      - image: cimg/go:1.17.2
+    steps:
+      - checkout
+      - run:
+         name: Dynamically generate a pipline.yml
+         command: | 
+           cd .circleci
+           ls -la
+           echo "Merge all YAML files into a dynamically generated pipeline.yml"
+           cat executors.yml jobs.yml workflows.yml > pipeline.yml
+           ls -la
+           cat pipeline.yml
+       - continuation/continue: 
+          configuration_path: .circleci/pipeline.yml
+         
+workflows:
+  setup:
+    jobs:
+        
