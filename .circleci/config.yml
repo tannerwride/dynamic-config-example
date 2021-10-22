@@ -19,6 +19,7 @@ jobs:
            cat executors.yml jobs.yml workflows.yml > pipeline.yml
            ls -la
            cat pipeline.yml
+           echo "Awesome!"
       - continuation/continue: 
           configuration_path: .circleci/pipeline.yml
          
