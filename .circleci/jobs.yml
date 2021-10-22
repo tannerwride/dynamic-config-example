@@ -1,1 +1,15 @@
-
+jobs:
+  build:
+    docker:
+      - image: cimg/ruby:3.0.2
+    steps:
+      - checkout
+      - run: echo "A first hello"
+      - run: sleep 5
+  test:
+    docker:
+      - image: cimg/ruby:3.0.2
+    steps:
+      - checkout
+      - run: echo "A more familiar hi"
+      - run: sleep 5
