@@ -16,3 +16,5 @@ The ability to generate configurations dynamically depending on specific pipelin
 
 ## Getting Started with Dynamic Config
 
+A few setup steps are required to begin using dynamic config. The first is enableing dynamic config on your desired project in CircleCI. 
+
