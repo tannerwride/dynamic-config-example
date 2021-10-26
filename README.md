@@ -49,3 +49,5 @@ setup: true
 ### The Continuation Orb
 
 When using dynamic configuration, at the end of the setup workflow, a continue job from the `continuation orb` must be called (NOTE: this does not apply if you desire to conditionally execute workflows or steps based on updates to specified files, as described in the [Configuration Cookbook](https://circleci.com/docs/2.0/configuration-cookbook/?section=examples-and-guides#execute-specific-workflows-or-steps-based-on-which-files-are-modified) example).
+
+The `continuation` orb assists CircleCI users in managing the pipeline continuation process easily. The continuation orb wraps an API call to `continuePipeline` in an easy-to-use fashion. See the [continuation](https://circleci.com/developer/orbs/orb/circleci/continuation) orb documentation for more information.
