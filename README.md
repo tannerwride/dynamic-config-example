@@ -74,3 +74,10 @@ In this example, we will create a dynamic config file that will generate a pipel
 - Click **Create Repository**
 
 <img src="images/repodesc.png">
+
+### Add a .yml file
+
+CircleCI uses a YAML file to identify how you want your testing environment setup and what tests you want to run. On CircleCI 2.0, this file must be called `config.yml` and must be in a hidden folder called .circleci (on Mac, Linux, and Windows systems, files and folders whose names start with a period are treated as system files that are hidden from users by default).
+
+- In your new repository, click the "Create new file" button and type `.circleci/config.yml`.
+- You should now have in front of you a blank `config.yml` file in a `.circleci` folder. 
