@@ -68,4 +68,9 @@ In this example, we will create a dynamic config file that will generate a pipel
 - Navigate to your account on GitHub.com
   - Go to the Repositories tab and then select New
 
+<img src="images/newrepo.png">
 
+- Add a repository name and initialize with a README
+- Click **Create Repository**
+
+<img src="images/repodesc.png">
