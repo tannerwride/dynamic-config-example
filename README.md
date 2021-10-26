@@ -18,3 +18,5 @@ The ability to generate configurations dynamically depending on specific pipelin
 
 A few setup steps are required to begin using dynamic config. The first is enableing dynamic config on your desired project in CircleCI. 
 
+- In CircleCI, open the project settings that you would like to enable dynamic config on. 
+
