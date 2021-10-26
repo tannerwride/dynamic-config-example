@@ -81,3 +81,17 @@ CircleCI uses a YAML file to identify how you want your testing environment setu
 
 - In your new repository, click the "Create new file" button and type `.circleci/config.yml`.
 - You should now have in front of you a blank `config.yml` file in a `.circleci` folder. 
+
+To begin, we will create a simple config file. Copy the code below and paste it into your config file in your repo. 
+
+```yml
+version: 2.1
+jobs:
+  build:
+    docker: 
+      - image: cimg/go:1.17.2
+    steps:
+      - checkout
+      - run: echo "A static config file!"
+```
+This is a static config file. Will add to this file as we go along to make it dynamic. For now, commit the changes. 
