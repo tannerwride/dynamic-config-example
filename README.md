@@ -59,3 +59,6 @@ setup: true
 orbs:
   continuation: circleci/continuation@0.1.2
 ```
+## Create a Dynamic Config
+
+In this example, we will create a dynamic config file that will generate a pipeline.yml file that is a combination of 3 configuration files that exist in our repository. This is a basic example of dynamic config that showcases how to generate and then use a dynamically generated config file. 
