@@ -46,3 +46,6 @@ Once the project has dynamic config enabled, your static config.yml will continu
 version: 2.1
 setup: true
 ```
+### The Continuation Orb
+
+When using dynamic configuration, at the end of the setup workflow, a continue job from the `continuation orb` must be called (NOTE: this does not apply if you desire to conditionally execute workflows or steps based on updates to specified files, as described in the [Configuration Cookbook](https://circleci.com/docs/2.0/configuration-cookbook/?section=examples-and-guides#execute-specific-workflows-or-steps-based-on-which-files-are-modified) example).
