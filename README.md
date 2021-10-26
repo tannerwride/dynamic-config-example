@@ -5,6 +5,7 @@ In this example, we will create a basic dynamic configuration in CircleCI that m
 ## Prereqs
 
 - Some basic knowledge of YAML and CircleCI configuration
+- Some basic knowledge of git and an existing GitHub.com account
 
 ## What is Dynamic Config? 
 
