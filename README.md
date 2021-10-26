@@ -62,3 +62,8 @@ orbs:
 ## Create a Dynamic Config
 
 In this example, we will create a dynamic config file that will generate a pipeline.yml file that is a combination of 3 configuration files that exist in our repository. This is a basic example of dynamic config that showcases how to generate and then use a dynamically generated config file. 
+
+### Create a New Repository
+
+- Navigate to your account on GitHub.com
+  - Go to the Repositories tab and then select New
