@@ -15,6 +15,8 @@ The ability to generate configurations dynamically depending on specific pipelin
 - Pass pipeline parameter values and/or generate additional configuration
 - Trigger separate config.yml configurations which exist outside the default parent .circleci/ directory
 
+To use our dynamic configuration feature, you can add the key `setup` with a value of `true` to the top-level of your parent configuration file (in the .circleci/ directory). This will designate that config.yaml as a setup workflow configuration, enabling you and your team to get up and running with dynamic configuration.
+
 ### Why Dynamic Config?
 
 Users may find that nstead of manually creating each and every individual CircleCI configuration per project, they would prefer to generate these configurations dynamically, depending on specific pipeline parameters or file-paths.
