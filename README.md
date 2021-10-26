@@ -15,6 +15,12 @@ The ability to generate configurations dynamically depending on specific pipelin
 - Pass pipeline parameter values and/or generate additional configuration
 - Trigger separate config.yml configurations which exist outside the default parent .circleci/ directory
 
+### Why Dynamic Config?
+
+Users may find that nstead of manually creating each and every individual CircleCI configuration per project, they would prefer to generate these configurations dynamically, depending on specific pipeline parameters or file-paths.
+
+This becomes particularly useful in cases where your team is using a monorepo, or a single repository, as opposed to using multiple repositories to store your code. In the case of using a monorepo, it is of course optimal to only trigger specific builds in specific areas of your project. Otherwise, all of your microservices/sub-projects will go through the entirety of your build, test, and deployment processes when any single update is introduced.
+
 ## Getting Started with Dynamic Config
 
 A few setup steps are required to begin using dynamic config. The first is enableing dynamic config on your desired project in CircleCI. 
