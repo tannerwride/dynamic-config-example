@@ -38,4 +38,9 @@ A few setup steps are required to begin using dynamic config. The first is enabl
 
 ### Add setup Key
 
-Once the project has dynamic config enabled, your static config.yml will continue to work as normal. This feature will not be used until you add the key `setup` with a value of `true`.
+Once the project has dynamic config enabled, your static config.yml will continue to work as normal. This feature will not be used until you add the key `setup` with a value of `true`. We will work on creating our own dynamic config soon, but for reference below is an example of what this looks like in a `config.yml` file. 
+
+```yml
+version: 2.1
+setup: true
+```
