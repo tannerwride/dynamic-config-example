@@ -95,3 +95,10 @@ jobs:
       - run: echo "A static config file!"
 ```
 This is a static config file. Will add to this file as we go along to make it dynamic. For now, commit the changes. 
+
+### Follow and Enable Dynamic Config
+
+Now that we have created a repo with a config file, we can follow it on CircleCI and enable dynamic config. 
+
+- Navigate to the CircleCI application.
+- Click follow next to your new repo under "Projects"
