@@ -157,3 +157,6 @@ jobs:
       - run: echo "A static config file!"
  ```
  
+### Add a shell script
+
+Next, we will add a shell script to the config file. This shell script will combine three files to create a new config file. Shell scripting can grant finer control over your build. It is relatively straightforward, but there are alwasy chances of error. View the [Using Shell Scripts]"https://circleci.com/docs/2.0/using-shell-scripts/" page in the CircleCI docs for best practices. 
