@@ -33,10 +33,9 @@ A few setup steps are required to begin using dynamic config. The first is enabl
 
 <img src="images/projectsettings.png">
 
-- On the left handed panel, select **Advanced**. 
-- Scroll to the bottom of the page and select **Enable dynamic config using setup workflows**.
 
-<img src="images/enabledynamic.png">
+
+
 
 ### Add setup Key
 
@@ -101,4 +100,19 @@ This is a static config file. Will add to this file as we go along to make it dy
 Now that we have created a repo with a config file, we can follow it on CircleCI and enable dynamic config. 
 
 - Navigate to the CircleCI application.
-- Click follow next to your new repo under "Projects"
+- Click `Set Up Project` next to your new repo under "Projects."
+
+Once you have selected "Set Up Project", a window will appear asking you to select a config file. Select the button that says "If you already have a .circleci/config.yml in your repo, select the branch it's on to start building." A green checkmark will confirm the file has been found.
+
+<img src="images/selectconfigfile.png">
+
+Once the file has been found, click "Let's Go." A pipeline will then run in CircleCI. This will be based off of the static config file that we added. You can look into the workflow to see the single build job that was in the config file. 
+
+- Click on "Project Settings" on the top right of the screen. 
+
+<img src="images/projectsettings.png">
+
+- On the left handed panel, select **Advanced**. 
+- Scroll to the bottom of the page and select **Enable dynamic config using setup workflows**.
+
+<img src="images/enabledynamic.png">
