@@ -25,7 +25,7 @@ This becomes particularly useful in cases where your team is using a monorepo, o
 
 ## Getting Started with Dynamic Config
 
-A few setup steps are required to begin using dynamic config. The first is enableing dynamic config on your desired project in CircleCI. 
+A few setup steps are required to begin using dynamic config. The first is enableing dynamic config on your desired project in CircleCI. We will walk through these steps when we build our dynamic config. For now, here is what is required:
 
 ### Enable Dynamic Config
 
