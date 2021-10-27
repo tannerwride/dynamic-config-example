@@ -23,9 +23,11 @@ Users may find that nstead of manually creating each and every individual Circle
 
 This becomes particularly useful in cases where your team is using a monorepo, or a single repository, as opposed to using multiple repositories to store your code. In the case of using a monorepo, it is of course optimal to only trigger specific builds in specific areas of your project. Otherwise, all of your microservices/sub-projects will go through the entirety of your build, test, and deployment processes when any single update is introduced.
 
+In many use cases, automatic, dynamic generation of your configuration files will optimize your CircleCI experience and save your team both time and money.
+
 ## Getting Started with Dynamic Config
 
-A few setup steps are required to begin using dynamic config. The first is enableing dynamic config on your desired project in CircleCI. We will walk through these steps when we build our dynamic config. For now, here is what is required:
+A few setup steps are required to begin using dynamic config. The first is enabling dynamic config on your desired project in CircleCI. We will walk through these steps when we build our dynamic config. For now, here is what is required:
 
 ### Enable Dynamic Config
 
@@ -112,3 +114,7 @@ Once the file has been found, click "Let's Go." A pipeline will then run in Circ
 - Scroll to the bottom of the page and select **Enable dynamic config using setup workflows**.
 
 <img src="images/enabledynamic.png">
+
+### Add the Setup key
+
+Our project now has dynamic config enabled, but our config file is still static. The next step is to convert our config file into what is called a `setup workflow`. CircleCI’s dynamic configuration feature uses a setup workflow configuration. A setup workflow can contain jobs that setup children pipelines through computed pipeline parameters, or by generating follow-up pipelines via pre-existing scripts. These computed pipeline parameters and/or generated config.yaml files can then be passed into an additional config.yaml that potentially exists in outside directories.
