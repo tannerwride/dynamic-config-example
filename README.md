@@ -29,13 +29,9 @@ A few setup steps are required to begin using dynamic config. The first is enabl
 
 ### Enable Dynamic Config
 
-- In CircleCI, open the project settings that you would like to enable dynamic config on. 
+In CircleCI on the project you are interested in, dynamic config needs to be enabled.
 
-<img src="images/projectsettings.png">
-
-
-
-
+<img src="images/enabledynamic.png">
 
 ### Add setup Key
 
