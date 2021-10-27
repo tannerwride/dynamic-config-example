@@ -134,3 +134,26 @@ jobs:
       - checkout
       - run: echo "A static config file!"
  ```
+
+### Add the Continuation Orb
+
+Like mentioned above, the continuation orb allows us to continue our pipeline process. In our case, we will continue our pipeline from our original config file to a new config file that we will generate. 
+
+- If not in editing mode in your config file, click "Edit"
+- Add the continuation orb to the `config.yml` file
+
+```yml
+version: 2.1
+setup: true
+orbs: 
+  continuation: circleci/continuation@0.2.0
+
+jobs:
+  build:
+    docker: 
+      - image: cimg/go:1.17.2
+    steps:
+      - checkout
+      - run: echo "A static config file!"
+ ```
+ 
