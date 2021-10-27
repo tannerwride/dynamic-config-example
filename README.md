@@ -120,7 +120,7 @@ Once the file has been found, click "Let's Go." A pipeline will then run in Circ
 Our project now has dynamic config enabled, but our config file is still static. The next step is to convert our config file into what is called a `setup workflow`. CircleCI’s dynamic configuration feature uses a setup workflow configuration. A setup workflow can contain jobs that setup children pipelines through computed pipeline parameters, or by generating follow-up pipelines via pre-existing scripts. These computed pipeline parameters and/or generated config.yaml files can then be passed into an additional config.yaml that potentially exists in outside directories.
 
 - Navigate back to your GitHub repo and edit the config.yml file
-- Add the `setup` key to the config file to begin creating our dynamic config
+- Add the `setup` key to the config file and set it to `true` to begin creating our dynamic config
 
 ```yml
 version: 2.1
