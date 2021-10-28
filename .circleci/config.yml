@@ -16,7 +16,7 @@ jobs:
            cd .circleci
            ls -la
            echo "Merge all YAML files into a dynamically generated pipeline.yml"
-           cat executors.yml jobs.yml workflows.yml > pipeline.yml
+           cat version.yml jobs.yml workflows.yml > pipeline.yml
            ls -la
            cat pipeline.yml
            echo "Awesome!"
