@@ -169,3 +169,30 @@ Next, we will add a shell script to the config file. This shell script will comb
 Your `.circleci` folder should now contain the following:
 
 <img src="images/circlecifolder.png">
+
+- Open and edit your `config.yml` file.
+- Update your config file with the following: 
+
+```yml
+version: 2.1
+setup: true
+orbs: 
+  continuation: circleci/continuation@0.2.0
+
+jobs:
+  build:
+    docker: 
+      - image: cimg/go:1.17.2
+    steps:
+      - checkout
+      - run: 
+         name: Dynamically generate a pipeline.yml
+         command: |
+           cd .circleci
+           ls -la
+           echo "Merge all YAML files into a dynamically generated pipeline.yml"
+           cat version.yml jobs.yml workflows.yml > pipeline.yml
+           ls -la
+           cat pipeline.yml
+           echo "Awesome!"
+```
