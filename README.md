@@ -258,3 +258,5 @@ Once you click "Commit changes" in GitHub, open your CircleCI application. You w
 Congratulations! You have built a dynamic workflow. This was a simple example that showed how dynamic workflows operate. For more information and study, see additional resources below. 
 
 ## Additional Resources
+
+[Dynamic Config - Cookbook](https://circleci.com/docs/2.0/configuration-cookbook/?section=examples-and-guides#a-basic-example)
