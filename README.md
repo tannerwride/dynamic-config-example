@@ -196,3 +196,40 @@ jobs:
            cat pipeline.yml
            echo "Awesome!"
 ```
+
+Here we have added a few commands on our run step. Don't worry about the details of the shell script here. All that is happening is it is combining those three files into one config file dynamically. But, there are still a few things missing from this config file before it will run dynamically. 
+
+### Call the Continuation Orb
+
+Now we will call the continuation orb. This allows the pipeline to continue past our original config file and move on to the config file we created in the shell script. All wwe need to do is tell the continuation step where to continue on.
+
+- Update your script with the following: 
+
+```yml
+version: 2.1
+setup: true
+orbs: 
+  continuation: circleci/continuation@0.2.0
+
+jobs:
+  build:
+    docker: 
+      - image: cimg/go:1.17.2
+    steps:
+      - checkout
+      - run: 
+         name: Dynamically generate a pipeline.yml
+         command: |
+           cd .circleci
+           ls -la
+           echo "Merge all YAML files into a dynamically generated pipeline.yml"
+           cat version.yml jobs.yml workflows.yml > pipeline.yml
+           ls -la
+           cat pipeline.yml
+           echo "Awesome!"
+      - continuation/continue: 
+          configuration_path: .circleci/pipeline.yml
+```          
+
+
+Here we called the continuation orb by using the `continuation/continue:` key and provided a configuration path to the `pipeline.yml` that was created by the shell script. 
