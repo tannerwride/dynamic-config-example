@@ -159,4 +159,13 @@ jobs:
  
 ### Add a shell script
 
-Next, we will add a shell script to the config file. This shell script will combine three files to create a new config file. Shell scripting can grant finer control over your build. It is relatively straightforward, but there are alwasy chances of error. View the [Using Shell Scripts](https://circleci.com/docs/2.0/using-shell-scripts/) page in the CircleCI docs for best practices. 
+Next, we will add a shell script to the config file. This shell script will combine three files to create a new config file. Shell scripting can grant finer control over your build. It is relatively straightforward, but there are alwasy chances of error. View the [Using Shell Scripts](https://circleci.com/docs/2.0/using-shell-scripts/) page in the CircleCI docs for best practices when adding shell scripts to your config. 
+
+- First, we need the three files that we will combine during our `setup workflow`. These three files can be found in this repository at `dynamic-config-example/.circleci`. You can copy the contents and add the following three files to your `.circleci` folder in your repo. 
+  - `version.yml` contains the CircleCI version
+  - `jobs.yml` contains two jobs, build and test
+  - `workflows.yml` contains a workflow
+
+Your `.circleci` folder should now contain the following:
+
+<img src="images/circlecifolder.png">
