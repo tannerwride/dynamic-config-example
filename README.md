@@ -201,7 +201,7 @@ Here we have added a few commands on our run step. Don't worry about the details
 
 ### Call the Continuation Orb
 
-Now we will call the continuation orb. This allows the pipeline to continue past our original config file and move on to the config file we created in the shell script. All wwe need to do is tell the continuation step where to continue on.
+Now we will call the continuation orb. This allows the pipeline to continue past our original config file and move on to the config file we created in the shell script. All we need to do is tell the continuation step where to continue on.
 
 - Update your script with the following: 
 
@@ -233,3 +233,18 @@ jobs:
 
 
 Here we called the continuation orb by using the `continuation/continue:` key and provided a configuration path to the `pipeline.yml` that was created by the shell script. 
+
+### Add a Setup Workflow
+
+The last piece we will add to our config file is a workflow. 
+
+- Add the following to the bottom of your `config.yml` file:
+
+```yml
+workflows:
+  setup:
+    jobs:
+      - setup
+```
+
+Here we added a workflow and called our setup job. Now, our config file will run, combine three files, and run the new `pipeline.yml` file. 
