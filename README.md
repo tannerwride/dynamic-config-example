@@ -260,3 +260,6 @@ Congratulations! You have built a dynamic workflow. This was a simple example th
 ## Additional Resources
 
 [Dynamic Config - Cookbook](https://circleci.com/docs/2.0/configuration-cookbook/?section=examples-and-guides#a-basic-example)
+[Continuation Orb Quick Start](https://circleci.com/developer/orbs/orb/circleci/continuation)
+[CircleCI Academy Course](https://academy.circleci.com/dynamic-config?access_code=public-2021)
+[Configuration Reference](https://circleci.com/docs/2.0/configuration-reference/)
