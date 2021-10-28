@@ -4,7 +4,7 @@ orbs:
   continuation: circleci/continuation@0.2.0
 
 jobs:
-  build:
+  setup:
     docker: 
       - image: cimg/go:1.17.2
     steps:
