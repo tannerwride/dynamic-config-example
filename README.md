@@ -253,7 +253,7 @@ Here we added a workflow and called our setup job. Now, our config file will run
 
 Once you click "Commit changes" in GitHub, open your CircleCI application. You will now see that two workflows were run on the pipeline. The second workflow `build_and_test` comes from the dynamic config file that was created in the original `config.yml` file. You will also notice that the setup workflow from `config.yml` has a `setup` tag next to it, indicating it is the setup workflow. 
 
-<img src"images/twoworkflow.png">
+<img src="images/twoworkflow.png">
 
 Congratulations! You have built a dynamic workflow. This was a simple example that showed how dynamic workflows operate. For more information and study, see additional resources below. 
 
