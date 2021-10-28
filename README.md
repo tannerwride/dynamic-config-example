@@ -248,3 +248,5 @@ workflows:
 ```
 
 Here we added a workflow and called our setup job. Now, our config file will run, combine three files, and run the new `pipeline.yml` file. 
+
+### Commit Changes and See Results
