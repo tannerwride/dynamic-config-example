@@ -84,7 +84,7 @@ To begin, we will create a simple config file. Copy the code below and paste it 
 ```yml
 version: 2.1
 jobs:
-  build:
+  setup:
     docker: 
       - image: cimg/go:1.17.2
     steps:
@@ -127,7 +127,7 @@ version: 2.1
 setup: true
 
 jobs:
-  build:
+  setup:
     docker: 
       - image: cimg/go:1.17.2
     steps:
@@ -149,7 +149,7 @@ orbs:
   continuation: circleci/continuation@0.2.0
 
 jobs:
-  build:
+  setup:
     docker: 
       - image: cimg/go:1.17.2
     steps:
@@ -180,7 +180,7 @@ orbs:
   continuation: circleci/continuation@0.2.0
 
 jobs:
-  build:
+  setup:
     docker: 
       - image: cimg/go:1.17.2
     steps:
@@ -212,7 +212,7 @@ orbs:
   continuation: circleci/continuation@0.2.0
 
 jobs:
-  build:
+  setup:
     docker: 
       - image: cimg/go:1.17.2
     steps:
