@@ -1,32 +1,18 @@
 version: 2.1
 setup: true
 orbs: 
-  continuation: circleci/continuation@0.2.0
+  path-filtering: circleci/path-filtering@0.1.3
 
 jobs:
-  setup:
-    docker: 
-      - image: cimg/go:1.17.2
-    resource_class: small
+  setup_job:
+    executor: path-filtering/default
     steps:
       - checkout
-      - run: 
-         name: Dynamically generate a pipeline.yml
-         command: |
-           cd .circleci
-           ls -la
-           echo "Merge all YAML files into a dynamically generated pipeline.yml"
-           cat version.yml jobs.yml workflows.yml > pipeline.yml
-           ls -la
-           cat pipeline.yml
-           echo "Awesome!"
-      - continuation/continue: 
-          configuration_path: .circleci/pipeline.yml
-
-         
-workflows:
-   version: 2.1
-   setup:
-    jobs:
-      - setup
+      - path-filtering/filter:
+        name: check-files
+        mapping: | 
+          patha/.* run-path-a true
+          pathb/.* run-path-b true
+        base-revision: << pipeline.git.base_revision >> 
+        config-path: .circleci/continue-config.yml
         
